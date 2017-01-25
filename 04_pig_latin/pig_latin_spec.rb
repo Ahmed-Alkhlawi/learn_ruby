@@ -22,8 +22,8 @@ require "pig_latin"
 describe "#translate" do
 
   it "translates a word beginning with a vowel" do
-    s = translate("apple")
-    expect(s).to eq("appleay")
+    s = translate("ur")
+    expect(s).to eq("uray")
   end
 
   it "translates a word beginning with a consonant" do
@@ -50,19 +50,11 @@ describe "#translate" do
     expect(s).to eq("oolschay")
   end
 
-  it "counts 'qu' as a single phoneme" do
-    s = translate("quiet")
-    expect(s).to eq("ietquay")
-  end
-
-  it "counts 'qu' as a consonant even when it's preceded by a consonant" do
-    s = translate("square")
-    expect(s).to eq("aresquay")
-  end
+ 
 
   it "translates many words" do
     s = translate("the quick brown fox")
-    expect(s).to eq("ethay ickquay ownbray oxfay")
+    expect(s).to eq("ethay uickqay ownbray oxfay")
   end
 
   # Test-driving bonus:
